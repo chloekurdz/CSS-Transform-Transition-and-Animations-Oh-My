@@ -3,12 +3,16 @@
   animation-name: top;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  position: relative;
+  top: 2em;
+  bottom: 3em;
 }
 
 .hamburger:hover > div:nth-child(2){
   animation-name: middle;
   animation-duration: .1s;
   animation-fill-mode: forwards;
+  opacity: 0;
 }
 
 .hamburger:hover > div:nth-child(3){
@@ -16,6 +20,9 @@
   animation-name: bottom;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  position: relative;
+  top: -2em;
+  bottom: -3em;
 }
 
 nav {
@@ -28,16 +35,16 @@ nav {
 }
 
 @keyframes top {
-  from {}
-  to {}
+  from {transform: rotate(180deg); }
+  to {transform: rotate(-45deg); }
 }
 
 @keyframes middle {
-  from {}
-  to {}
+  from {transform: rotate(180deg); }
+  to {transform: rotate(0deg); }
 }
 
 @keyframes bottom {
-  from {}
-  to {}
+  from {transform: rotate(180deg); }
+  to {transform: rotate(45deg); }
 }
